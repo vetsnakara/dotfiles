@@ -24,27 +24,58 @@ Plug 'vim-airline/vim-airline-themes'
 
 "colorthemes
 Plug 'morhetz/gruvbox'
+Plug 'ayu-theme/ayu-vim'
 
 call plug#end()
 
 syntax on
+
+"ayu color settings
+"colorscheme ayu
+"set termguicolors     " enable true colors support
+"let ayucolor="mirage"
+
+"gruvbox theme settings
 colorscheme gruvbox
+set background=dark
+
+set scrolloff=8
 
 set number
+set relativenumber
+
+set tabstop=4 softtabstop=4
 set expandtab
-set tabstop=2
-set background=dark
+set shiftwidth=4
+set smartindent
+
 set hlsearch
 set incsearch
 set ignorecase
 
-"map leader key
-let g:mapleader=','
+let g:mapleader=" "
+let NERDTreeShowHidden=1
 
 "mappings
+map <leader><CR> :so ~/.vimrc<CR>
+
 map <C-n> :NERDTreeToggle<CR>
+
 map <C-p> :GFiles<CR>
-map <Leader> <Plug>(easymotion-prefix)
+map <leader>pf :Files<CR>
+
+map <leader> <Plug>(easymotion-prefix)
+
+"quickfix motions
+nnoremap <C-j> :cnext<CR>
+nnoremap <C-k> :cprev<CR>
+
+vnoremap <leader>p "_dP
+vnoremap <leader>y "+y
+nnoremap <leader>Y gg"+yG
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 "Удобное управление окнами
 map <silent> <C-h> :call WinMove('h')<CR>
