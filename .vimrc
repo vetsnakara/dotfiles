@@ -1,6 +1,9 @@
 call plug#begin('~/.vim/plugged')
 
+"nerdtree
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 Plug 'Valloric/YouCompleteMe'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
@@ -8,7 +11,7 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
-" Plug 'junegunn/vim-peekaboo'
+Plug 'junegunn/vim-peekaboo'
 
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
