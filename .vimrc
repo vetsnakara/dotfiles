@@ -1,19 +1,23 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'airblade/vim-rooter'
+
 "nerdtree
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'Valloric/YouCompleteMe'
 Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
+Plug 'junegunn/gv.vim'
 
 Plug 'easymotion/vim-easymotion'
+
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
@@ -28,6 +32,7 @@ Plug 'vim-airline/vim-airline-themes'
 "colorthemes
 Plug 'morhetz/gruvbox'
 Plug 'ayu-theme/ayu-vim'
+Plug 'ap/vim-css-color'
 
 call plug#end()
 
